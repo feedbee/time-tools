@@ -1,0 +1,91 @@
+/* FNTS */
+@import url('http://fonts.googleapis.com/css?family=Expletus+Sans');
+@import url('http://fonts.googleapis.com/css?family=Titillium+Web:400,300&subset=latin,latin-ext');
+@import url('pt-mono-fontfacekit/stylesheet.css');
+@import url('lekton-fontfacekit/stylesheet.css');
+
+/* UTLS */
+@import url('awesome.css');
+
+/* MRKP */
+body {
+	font-family: 'Titillium Web', 'Arial';
+	margin: 0;
+	padding: 0;
+}
+#h {
+    height: 1px;
+    left: 0;
+    overflow: visible;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+#c {
+	position: absolute;
+    top: -60px;
+    width: 100%;
+}
+#t {
+	font-family: 'LektonBold', 'PTMonoRegular', "Courier New";
+	font-size: 100px;
+	text-align: center;
+}
+#t-ms {
+	font-size: 60%;
+}
+#b {
+	text-align: center;
+}
+#b span {
+	font-family: 'LektonBold', Arial;
+	font-size: 20px;
+	font-weight: normal;
+	width: 2.5em;
+}
+#f {
+	font-size: 80%;
+	text-align: center;
+	opacity: .7;
+
+	margin: 10px 0 5px 0;
+	bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+/* WHT */
+.sch-wht {
+	background-color: white;
+	color: black;
+}
+.sch-wht a {
+	color: blue;
+}
+.sch-wht a:hover {
+	color: DarkBlue;
+}
+.sch-wht #t {
+	color: black;
+}
+.sch-wht #t-ms {
+	color: gray;
+}
+
+/* BLK */
+.sch-blk {
+	background-color: black;
+	color: white;
+}
+.sch-blk a {
+	color: white;
+}
+.sch-blk a:hover {
+	color: LightGray;
+}
+.sch-blk #t {
+	color: white;
+}
+.sch-blk #t-ms {
+	color: LightGray;
+}
