@@ -23,11 +23,11 @@ body {
 }
 #c {
 	position: absolute;
-    top: -60px;
+    top: -100px;
     width: 100%;
 }
 #t {
-	font-family: 'LektonBold', 'PTMonoRegular', "Courier New";
+	font-family: 'Titillium Web', 'LektonBold', "Courier New";
 	font-size: 100px;
 	text-align: center;
 }
