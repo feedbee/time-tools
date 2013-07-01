@@ -1,0 +1,9 @@
+@import url('http://fonts.googleapis.com/css?family=Titillium+Web:400,300&subset=latin,latin-ext');
+
+body, table {
+	font-family: 'Titillium Web', 'Arial';
+}
+
+strike {
+	opacity: .5;
+}
