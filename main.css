@@ -7,3 +7,11 @@ body, table {
 strike {
 	opacity: .5;
 }
+
+footer {
+	font-size: 80%;
+}
+
+ol>li {
+	list-style: none;
+}
