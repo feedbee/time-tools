@@ -3,31 +3,22 @@
 	<title>Exact Time</title>
 	<meta type="http-equiv" content="text/html; charset=utf-8" />
 
-	<script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 	<script src="ntp.js"></script>
-</head>
-<body style="font: 11pt 'Ubuntu Mono','Courier New'">
-	<div>Server: <span id="t-server">-</span></div>
-	<div>Local: &nbsp;<span id="t-local">-</span></div>
-	<script>
-		NTP.sync();
 
-		var upd = function () {
-			$('t-server').update(fmt(new Date(NTP.fixTime())));
-			$('t-local').update(fmt(new Date()));
-			setTimeout(upd, 50);
-		};
-		var fmt = function (time) {
-			return spl(time.getDate(), 2) + "." + spl(time.getMonth() + 1, 2) + "." + time.getFullYear() + " "
-				+ spl(time.getHours(), 2) + ":" + spl(time.getMinutes(), 2) + ":" + spl(time.getSeconds(), 2)
-				+ "." + spl(Math.floor(time.getMilliseconds() / 10), 2);
-		};
-		var spl = function (i, n) {
-			var s = String(i);
-			while (n - s.length > 0) s = "0" + s;
-			return s;
-		};
-		upd();
-	</script>
+	<link href='main.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+	<div id="h">
+		<div id="c">
+			<div>Our server time: <span id="t-server">-</span></div>
+			<div>Your local time: <span id="t-local">-</span></div>
+		</div>
+	</div>
+
+	<footer>&copy; <a href="http://valera.ws/" target="_blank">Valera Leontyev</a> (feedbee), 2013. Style: <a href="#stl-blk" class="stl-swch">black</a> / <a href="#stl-wht" class="stl-swch">white</a></footer>
+
+	<script src="exact-time.js"></script>
+    <script src="../stopwatch/style.js"></script>
 </body>
 </html>

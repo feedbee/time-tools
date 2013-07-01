@@ -37,8 +37,8 @@ var NTP = {
     var date = new Date();
     return date.getTime();
   },
-  parseServerResponse : function(data) {
-    var serverData = data.responseText.split(":");
+  parseServerResponse : function(responseText) {
+    var serverData = responseText.split(":");
     var serverOffset = parseInt(serverData[0]);
     var initialClientTime = parseInt(serverData[1]);
 
@@ -66,14 +66,10 @@ var NTP = {
   },
   getServerTime : function() {
     try {
-      var req = new Ajax.Request(NTP.serverUrl, {
-        onSuccess : NTP.parseServerResponse,
-        method : "get",
-        parameters : "t=" + NTP.getNow()
-      });
+      var req = $.get(NTP.serverUrl, {t: NTP.getNow()}, NTP.parseServerResponse);
     } catch(e) {
       return false;
-      //prototype.js not available
+      //jquery.js not available
     }
   },
   setCookie : function(aCookieName, aCookieValue) {
