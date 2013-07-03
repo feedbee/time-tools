@@ -1,7 +1,9 @@
 NTP.sync();
 
 var upd = function () {
-    $('#t-server').text(fmt(new Date(NTP.fixTime())));
+    if (NTP.wasInitialSynced) {
+        $('#t-server').text(fmt(new Date(NTP.fixTime())));
+    }
     $('#t-local').text(fmt(new Date()));
     setTimeout(upd, 50);
 };

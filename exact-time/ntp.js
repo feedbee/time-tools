@@ -12,11 +12,12 @@
  *
  */
 var NTP = {
-  cookieShelfLife : 7, //7 days
-  requiredResponses : 2,
+  cookieShelfLife : 1, // 1 day
+  requiredResponses : 5,
   offsets : new Array, 
   serverUrl : "time.php",
   resyncTime : 10, // minutes
+  wasInitialSynced : false,
   sync : function() {
     // if the time was set within the last x minutes; ignore this set request; time was synce recently enough
     var offset = NTP.getCookie("NTPClockOffset");
@@ -25,6 +26,7 @@ var NTP = {
         var t = offset.split("|")[1];	  
         var d = NTP.fixTime()-parseInt(t, 10);
         if (d < (1000 * 60 * NTP.resyncTime)) {
+          NTP.wasInitialSynced = true;
           return false; // x minutes; return==skip
         }
       } catch(e) {}
@@ -52,6 +54,7 @@ var NTP = {
       // build average
       var average = NTP.getAvgOffset();
       NTP.setCookie("NTPClockOffset", average + '|' + NTP.fixTime()); // save the timestamp that we are setting it
+      NTP.wasInitialSynced = true;
     } else {
       NTP.getServerTime();
     }
