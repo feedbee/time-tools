@@ -19,7 +19,7 @@ body {
     width: 100%;
 }
 #c {
-	position: absolute;
+    position: absolute;
     top: -70px;
     width: 100%;
 }
@@ -40,7 +40,7 @@ footer {
     color: black;
 }
 .sch-wht a {
-	color: blue;
+    color: blue;
 }
 .sch-wht a:hover {
     color: DarkBlue;
