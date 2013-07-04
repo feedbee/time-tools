@@ -3,11 +3,11 @@
 
 /* MRKP */
 body {
-	font: 16pt 'Ubuntu Mono', 'LektonBold', 'Courier New';
-	text-align: center;
+    font: 16pt 'Ubuntu Mono', 'LektonBold', 'Courier New';
+    text-align: center;
 
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 #h {
@@ -25,41 +25,41 @@ body {
 }
 
 footer {
-	font-size: 60%;
-	opacity: .7;
+    font-size: 60%;
+    opacity: .7;
 
-	margin: 10px 0 5px 0;
-	bottom: 0;
-	position: absolute;
-	width: 100%;
+    margin: 10px 0 5px 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
 }
 
 /* WHT */
 .sch-wht {
-	background-color: white;
-	color: black;
+    background-color: white;
+    color: black;
 }
 .sch-wht a {
 	color: blue;
 }
 .sch-wht a:hover {
-	color: DarkBlue;
+    color: DarkBlue;
 }
 .sch-wht #c {
-	color: black;
+    color: black;
 }
 
 /* BLK */
 .sch-blk {
-	background-color: black;
-	color: white;
+    background-color: black;
+    color: white;
 }
 .sch-blk a {
-	color: white;
+    color: white;
 }
 .sch-blk a:hover {
-	color: LightGray;
+    color: LightGray;
 }
 .sch-blk #c {
-	color: white;
+    color: white;
 }
