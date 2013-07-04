@@ -1,9 +1,9 @@
 /* FNTS */
-@import url('../common/lekton-fontfacekit/stylesheet.css');
+@import url('http://fonts.googleapis.com/css?family=Titillium+Web:400,300&subset=latin,latin-ext');
 
 /* MRKP */
 body {
-    font: 16pt 'Ubuntu Mono', 'LektonBold', 'Courier New';
+    font: 16pt 'Ubuntu Mono', 'Titillium Web', 'Courier New';
     text-align: center;
 
     margin: 0;
